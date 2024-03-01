@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Shop {% endblock title %}
+{% block css %} <link rel="stylesheet" href="{% static '/css/store.css' %}"> {% endblock css %}
+
+{% block body %}
+    <div>
+        <h1 class="bg-white p-4 text-center">Get ₹20000.00–₹57800.00 in credit towards iPhone 14 or iPhone 14 Pro when you trade in iPhone 11 or higher.* <span class="text-blue-500">Shop iPhone </span></h1>
+        <div class="container mx-auto p-10 flex flex-row justify-evenly flex-wrap items-center">
+            <div>
+                <h1 class="text-black text-4xl font-weight-400 p-2 capitalize">Shop {{device}}</h1>
+            </div>
+            <div class="">
+                <div class="flex pt-10">
+                    <img src="{% static '/Assets/man.jpg' %}" alt="man" width="50px" height="50px" class="rounded-3xl">
+                    <div>
+                        <h1 class="text-sm">Need {{device}} Shopping Help?</h1>
+                        <h1 class="text-sm text-blue-500">Ask a Specialist</h1>
+                    </div>
+                </div>
+                <div class="flex pt-6">
+                    <img src="{% static '/Assets/find.png' %}" alt="man" width="45px" height="45px" class="rounded-3xl">
+                    <div class="p-1">
+                        <h1 class="text-sm">Visit an Apple Store </h1>
+                        <h1 class="text-sm text-blue-500">Find one near You </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h1 class="text-center lg:text-3xl text-2xl">All models. <span class="text-gray-500">Take your pick.</span></h1>
+        <div class="flex overflow-auto lg:pl-48 pl-10 scrollPar">
+            <div class="flex flex-row">
+                {% for dev in data %}
+                    <div class="w-96  border border-gray-300 shadow-lg my-10 rounded-xl bg-graylap mr-4 h-cus relative">
+                        <h1 class="text-black text-xl pt-4 text-center">{{dev.name}}</h1>
+                        <img src="{{dev.img}}" alt="" class="rounded-xl">
+                        <div class="flex flex-row absolute bottom-0 pb-10">
+                            <h1 class="mt-1 ml-3 text-sm" style="width:75%">From ₹15483.00/mo.Per Month with instant savings§§ and No Cost EMI§Footnote or ₹{{dev.price}}</h1>
+                            <button class="bg-blue-600 w-16 h-10 mt-3 text-white rounded-xl">Buy</button>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock body %}

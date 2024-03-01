@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Store{% endblock title %}
+{% block body %}
+   {% block css %} <link rel="stylesheet" href="{% static '/css/store.css' %}"> {% endblock css %}
+    <div class="bg-gray-100">
+        <h1 class="bg-white p-4 text-center">Get ₹20000.00–₹57800.00 in credit towards iPhone 14 or iPhone 14 Pro when you trade in iPhone 11 or higher.* <span class="text-blue-500">Shop iPhone </span></h1>
+        <div class="container mx-auto columns-lg lg:pl-80 p-10">
+            <div>
+                <h1 class="text-gray-500 text-4xl font-bold lg:pt-24 p-2"><span class="text-black">Store.</span>The best way to buy the products you love.</h1>
+            </div>
+            <div class="">
+                <div class="flex lg:pt-24 pt-10">
+                    <img src="{% static '/Assets/man.jpg' %}" alt="man" width="50px" height="50px" class="rounded-3xl">
+                    <div>
+                        <h1 class="text-sm">Need Shopping Help?</h1>
+                        <h1 class="text-sm text-blue-500">Ask a Specialist</h1>
+                    </div>
+                </div>
+                <div class="flex pt-6">
+                    <img src="{% static '/Assets/find.png' %}" alt="man" width="45px" height="45px" class="rounded-3xl">
+                    <div class="p-1">
+                        <h1 class="text-sm">Visit an Apple Store </h1>
+                        <h1 class="text-sm text-blue-500">Find one near You </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flex gap-10 flex-wrap md:px-28 justify-center">
+            {% for cat in categories %}
+                <div class="cat" onclick="changeRoute('{{cat.name}}')">
+                    <img src="{{cat.img}}" alt="" width="150px" height="150px">
+                    <p class="text-center mt-1 ">{{cat.name}}</p>
+                </div>
+            {% endfor %}
+        </div>
+       <div class="container mx-auto">
+            <h1 class="text-gray-500 md:text-3xl md:mt-5 mt-5 px-5 text-xl"><span class="text-black font-bold">The latest.</span> Take a look at what’s new right now.</h1>
+            <div class="overflow-auto flex scrollPar">
+                <div class="flex items-center justify-center">
+                    <div class="w-96  border border-gray-300 shadow-lg my-10 rounded-xl bg-graylap mr-4 h-cus">
+                        <h1 class="text-gray-500 text-sm pt-2 pl-4">MACBOOK AIR 15"</h1>
+                        <h1 class="text-black font-bold py-1  px-3 text-xl">Impressively big.</h1>
+                        <h1 class="text-black font-bold py-0  px-3 text-xl">Impossibly thin.</h1>
+                        <h1 class="mt-1 ml-3">From ₹134900.00</h1>
+                        <img src="{% static '/Assets/macproduct.jpg' %}" alt="" class="rounded-xl">
+                    </div>
+                    <div class="w-96 h-cus border border-gray-300 shadow-lg my-10 rounded-xl bg-graylap mr-4">
+                        <h1 class="text-gray-500 text-sm pt-2 pl-4">MAC STUDIO</h1>
+                        <h1 class="text-black font-bold py-1  px-3 text-xl">Supercharged by M2 Max <br/>and M2 Ultra.<h1>
+                        <h1 class="mt-1 ml-3">From ₹209900.00</h1>
+                        <img src="{% static '/Assets/macstudio.jpg' %}" alt="" class="rounded-xl mx-auto mt-28" width="80%">
+                    </div>
+                    <div class="w-96 h-cus border border-gray-300 shadow-lg my-10 rounded-xl bg-black mr-4">
+                        <h1 class="text-white text-sm pt-2 pl-4 ">IPHONE 14 PRO</h1>
+                        <h1 class="text-white font-bold py-1 px-3 text-2xl">Light. Bright. Full of might.<h1>
+                        <h1 class="mt-1 ml-3 text-white">From ₹129900.00</h1>
+                        <img src="{% static '/Assets/applestack.jpeg' %}" alt="" class="rounded-xl mx-auto -mt-1" width="80%">
+                    </div>
+                    <div class="w-96 h-cus border border-gray-300 shadow-lg my-10 rounded-xl bg-white mr-4">
+                        <h1 class="text-black text-sm pt-2 pl-4 ">PAYMENT OPTIONS</h1>
+                        <h1 class="text-black font-bold py-1 px-3 text-2xl">Flexible ways to pay.
+                        <br>Plus instant savings§§
+                        <br>and No Cost EMI§.<h1>
+                        <h1 class="mt-1 ml-3 text-white">From ₹129900.00</h1>
+                        <img src="{% static '/Assets/pay.jpeg' %}" alt="" class="rounded-xl ml-5" width="80%">
+                    </div>
+                    <div class="w-96 h-cus border border-gray-300 shadow-lg my-10 rounded-xl bg-white mr-4">
+                         <h1 class="text-black text-sm pt-2 pl-4 ">APPLE WATCH ULTRA</h1>
+                        <h1 class="text-black font-bold py-1 px-3 text-2xl">Adventure awaits.<h1>
+                        <h1 class="mt-1 ml-3 text-black">From From ₹89900.00</h1>
+                        <img src="{% static '/Assets/iwatch.jpeg' %}" alt="" class="rounded-xl mx-auto " width="80%">
+                    </div>
+                    <div class="w-96 h-cus border border-gray-300 shadow-lg my-10 rounded-xl bg-black mr-4">
+                        <h1 class="text-white text-sm pt-2 pl-4 ">IPAD AIR</h1>
+                        <h1 class="text-white font-bold py-1 px-3 text-2xl">Light. Bright. Full of might.<h1>
+                        <h1 class="mt-1 ml-3 text-white">From ₹59900.00</h1>
+                        <img src="{% static '/Assets/ipadv.jpeg' %}" alt="" class="rounded-xl mx-auto " width="80%">
+                    </div>
+                    <div class="w-96 h-cus border border-gray-300 shadow-lg my-10 rounded-xl bg-white mr-4">
+                        <h1 class="text-black text-sm pt-2 pl-4 ">IPHONE 14</h1>
+                        <h1 class="text-black font-bold py-1 px-3 text-2xl">Wonderfull.<h1>
+                        <h1 class="mt-1 ml-3 text-black">From ₹79900.00</h1>
+                        <img src="{% static '/Assets/iphone14.jpg' %}" alt="" class="rounded-xl mx-auto mt-16" width="80%">
+                    </div>
+                </div>
+            </div>
+       </div>
+       <script src="{% static '/js/store.js' %}"></script>
+    </div>
+{% endblock body %}

@@ -1,0 +1,74 @@
+<!doctype html>
+{% load static %}
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block css %}{% endblock css %}
+  <link rel="shortcut icon" href="{% static '/Assets/apple1.png' %}" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            bgGray:'#ECECEA',
+            appleGray:'#434344',
+            sonoma:'#FAFAFA',
+            graylap:'#FAFAFA'
+          },
+          spacing:{
+            cus:"500px"
+          }
+        }
+      }
+    }
+  </script>
+  <title>{% block title %} {% endblock title %} | Apple</title>
+</head>
+<body class="bg-gray-100">
+  <nav class= "flex items-center flex-row bg-appleGray justify-between md:justify-evenly p-4">
+    <a href="/"><img src="{% static '/Assets/apple.png' %}" width="20px" height="20px" class="mx-3"/></a>
+    <ul class="text-white text-sm gap-5 cursor-pointer md:flex hidden">
+      <a href="/store"><li class="hover:text-gray-400">Store</li></a>
+      <li class="hover:text-gray-400">Mac</li>
+      <li class="hover:text-gray-400">iPad</li>
+      <li class="hover:text-gray-400">iPhone</li>
+      <li class="hover:text-gray-400">Watch</li>
+      <li class="hover:text-gray-400">AirPods</li>
+      <li class="hover:text-gray-400">Tv & Home</li>
+      <li class="hover:text-gray-400">Entertainment</li>
+      <li class="hover:text-gray-400">Accessories</li>
+      <a href="/services"><li class="hover:text-gray-400">Services</li></a>
+    </ul>
+    <div class="flex flex-row gap-5">
+      <img src="{% static '/Assets/search.png'%}" width="20px" height="20px"/>
+      <img src="{% static '/Assets/shopping.png'%}" width="20px" height="20px" id="shoppingBag" onclick="HandleBar()"/>
+      <img src="{% static '/Assets/menu.png' %}" width="20px" height="20px" class="md:hidden block mr-4 cursor-pointer"/>
+    </div>
+  </nav>
+  <div class="w-screen h-56 bg-appleGray hidden" id="bar">
+    <div class="container mx-auto">
+      <h1 class="lg:pl-10 text-white text-xl pl-3">Your Bag is Empty</h1>
+      <a href="/signin"><h1 class="text-white lg:pl-10 pl-3 mt-2"><span class="text-blue-400">Signin</span> to see if you have any saved items.</h1></a>
+      <h1 class="text-white lg:pl-10 pl-3 font-bold">My Profile</h1>
+      <ul class="text-white lg:pl-10 pl-3">
+        <li>Orders</li>
+        <li>Your Saves</li>
+        <li>Account</li>
+        <li>Signin</li>
+      </ul>
+    </div>
+  </div>
+  {% block body %} {% endblock body %}
+  <footer class="bg-gray-200">
+    <p class="text-gray-500 text-xs lg:px-20 px-2 pt-10">
+      *Instant savings, otherwise referred to as instant cashback on the Apple Store Online, is available with the purchase of an eligible product for qualifying HDFC Bank Credit Cards & HDFC Bank Credit Card EMI only. Minimum transaction value of ₹10001.00 applies. Click here to see instant savings amounts and eligible devices. Instant savings is available for up to two orders per rolling 90-day period with an eligible card. Card eligibility is subject to terms and conditions between you and your card-issuing bank. Total transaction value is calculated after any trade-in credit or eligible discount applied. Any subsequent order adjustment(s) or cancellation(s) may result in instant savings being recalculated, and any refund may be adjusted to account for instant savings clawback; this may result in no refund being made to you. Offer may be revised or withdrawn at any time without any prior notice. Terms and conditions apply. Offer cannot be combined with Apple Store for Education or Corporate Employee Purchase Plan pricing. Multiple separate orders cannot be combined for instant savings.
+    </p>
+    <p class="text-xs lg:px-20 px-10 text-gray-500 text-center pb-5">More ways to shop: <span class="text-blue-400">Find an Apple Store </span>or <span class="text-blue-400">other retailer </span>near you. Or call 000800 040 1966.</p>
+    <p class="text-xs lg:px-20 px-10 text-gray-500 pb-5">Copyright © 2023 Apple Inc. All rights reserved.</p>
+  </footer>
+  <script src="{% static '/js/base.js' %}"></script>
+</body>
+</html>

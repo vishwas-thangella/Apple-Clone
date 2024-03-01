@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block body %} 
+  <div class="bg-bgGray">
+    <h1 class="text-sm text-center p-2 bg-white">Get up to ₹8000.00 instant savings on selected products with eligible HDFC Bank cards.* Shop now <span class="text-blue-600 mx-2 cursor-pointer"> > </span></h1>
+    <h1 class="text-center md:text-5xl pt-10 font-bold text-3xl">MacBook Air 15"</h1>
+    <h1 class="text-center md:text-2xl mt-1">Impressively big. Impossibly thin.</h1>
+    <div class="flex flex-row gap-10 text-blue-600 justify-center mt-1 font-bold">
+      <p class="cursor-pointer">Learn more > </p><p class="cursor-pointer">Buy > </p>
+    </div>
+    <img src="{% static '/Assets/mac.jpg' %}" width="100%"/>
+    <div class="bg-white p-3">
+      <h1 class="text-center lg:text-5xl font-bold mt-14 text-3xl">iPhone 14 </h1>
+      <h1 class="text-center mt-2 text-3xl">Wonderfull.</h1>
+      <div class="flex flex-row gap-10 text-blue-600 justify-center mt-1 font-bold pb-4">
+        <p class="cursor-pointer">Learn more > </p><p class="cursor-pointer">Buy > </p>
+      </div>
+      <img src="{% static '/Assets/iphone14.jpg' %}" class="lg:w-1/2 mx-auto"/>
+    </div>
+    <div class="bg-black">
+      <h1 class="text-white text-center lg:text-5xl text-3xl font-bold pt-5">iPhone 14 Pro</h1>
+      <h1 class="text-center text-white text-2xl mt-1">Pro.Beyond</h1>
+      <div class="flex flex-row gap-10 text-blue-600 justify-center mt-1 font-bold pb-4 mt-4">
+        <p class="cursor-pointer">Learn more > </p><p class="cursor-pointer">Buy > </p>
+      </div>
+    </div>
+    <video src="{% static '/Assets/14provideo.mp4' %}" muted width="100%" height="auto" autoplay loop></video>
+    <div class="container mx-auto columns-lg bg-white">
+      <div>
+        <h1 class="pt-10 lg:text-4xl text-3xl font-bold text-center">Mac Studio</h1>
+        <h1 class="text-center mt-2 lg:text-2xl text-xl">Supercharged by M2 Max and M2 Ultra</h1>
+        <div class="flex flex-row gap-10 text-blue-600 justify-center mt-1 font-bold pb-4 mt-4">
+          <p class="cursor-pointer">Learn more > </p><p class="cursor-pointer">Buy > </p>
+        </div>
+        <img src="{% static '/Assets/macstudio.jpg' %}" alt="" width="300px" height="300px" class="mx-auto">
+      </div>
+      <div>
+        <h1 class="pt-10 lg:text-3xl text-3xl font-bold text-center">iPad</h1>
+        <h1 class="text-center mt-2 lg:text-2xl text-xl">Lovable. Drawable. Magical.</h1>
+        <div class="flex flex-row gap-10 text-blue-600 justify-center mt-1 font-bold pb-4 mt-4">
+          <p class="cursor-pointer">Learn more > </p><p class="cursor-pointer">Buy > </p>
+        </div>
+        <img src="{% static '/Assets/ipad.jpg' %}" alt="" class="mx-auto lg:w-1/4">
+      </div>
+    </div>
+    <div class="container mx-auto columns-lg bg-white">
+      <div>
+        <h1 class="pt-10 lg:text-4xl text-3xl font-bold text-center">watchOS 10</h1>
+        <h1 class="text-center mt-2 lg:text-2xl text-xl">Everything you love. Like never before</h1>
+        <div class="flex flex-row gap-10 text-blue-600 justify-center mt-1 font-bold pb-4 mt-4">
+          <p class="cursor-pointer">Learn more > </p><p class="cursor-pointer">Buy > </p>
+        </div>
+        <img src="{% static '/Assets/watchos.jpg' %}" alt="" class="mx-auto">
+      </div>
+      <div>
+        <h1 class="pt-10 lg:text-4xl text-3xl font-bold text-center">iOS 17</h1>
+        <h1 class="text-center mt-2 lg:text-2xl text-xl">Every day. More extraordinary</h1>
+        <div class="flex flex-row gap-10 text-blue-600 justify-center mt-1 font-bold pb-4 mt-4">
+          <p class="cursor-pointer">Learn more > </p><p class="cursor-pointer">Buy > </p>
+        </div>
+        <img src="{% static '/Assets/ios17.jpg' %}" alt="" class="mx-auto">
+      </div>
+    </div>
+    <div class="container mx-auto columns-lg bg-white">
+      <div>
+        <h1 class="pt-10 lg:text-4xl text-3xl font-bold text-center">macOS Sonoma</h1>
+        <h1 class="text-center mt-2 lg:text-2xl text-xl">Come for the power. Stay for the fun.</h1>
+        <div class="flex flex-row gap-10 text-blue-600 justify-center mt-1 font-bold pb-4 mt-4">
+          <p class="cursor-pointer">Learn more > </p><p class="cursor-pointer">Buy > </p>
+        </div>
+        <img src="{% static '/Assets/macossonoma.jpg' %}" alt="" class="mx-auto">
+      </div>
+      <div>
+        <h1 class="pt-10 lg:text-4xl text-3xl font-bold text-center">iPadOS 17</h1>
+        <h1 class="text-center mt-2 lg:text-2xl text-xl">Even more capable. <br/>Even more you.</h1>
+        <div class="flex flex-row gap-10 text-blue-600 justify-center mt-1 font-bold pb-4 mt-4">
+          <p class="cursor-pointer">Learn more > </p><p class="cursor-pointer">Buy > </p>
+        </div>
+        <img src="{% static '/Assets/ipados17.jpeg' %}" alt="" class="mx-auto">
+      </div>
+    </div>
+  </div>
+{% endblock body %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} Signin {% endblock title %}
+{% load static %}
+{% block css %} <link rel="stylesheet" href="{% static '/css/signin.css' %}"> {% endblock css %}
+
+{% block body %}
+
+<div class="container w-screen mx-auto">
+    <h1 class="lg:pl-24 pt-24 text-3xl">Sign in for faster checkout.</h1>
+    <h1 class="text-center text-xl lg:mt-3 text-gray-600">Signin to Apple Store</h1>
+    <div class="flex flex-col items-center">
+        <input type="text" class="mx-auto w-60 h-7 mt-10 p-4 border border-gray-300 signInp" placeholder="Apple ID">
+    </div>
+    <div class="py-24">
+        <p class="text-blue-500 w-full text-center">Forgotten your Apple ID or password?</p>
+        <p class="text-blue-500 text-center w-full"><span class="text-black">Do not have an Apple ID?</span> Create yours now.</p>
+    </div>
+</div>
+
+{% endblock body %}
